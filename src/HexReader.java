@@ -1,5 +1,5 @@
 class HexReader {
-    String[] input = {"000A110D1260219", "78700F1318141E0C", "6A197D45B0FFFFFF"};
+    String[] input = {"000A110D1260219t", "78700F1318141E0C", "6A197D45B0FFFFFF"};
 
     public static void main(String[] args) {
         HexReader hex = new HexReader();
@@ -18,6 +18,8 @@ class HexReader {
                 }
                 System.out.println(hexNum);
             }
+        } catch (NumberFormatException e){
+            System.out.println("Number Format Exception: " + e.getMessage());
         } finally {
             System.out.println("**");
         }
